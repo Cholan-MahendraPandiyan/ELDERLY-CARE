@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- <style>
+
+
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+</style> -->
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh; /* Make the body fill the entire viewport height */
+        /* background-image: url('https://th.bing.com/th/id/OIP.1xMjhdff7VzokzE9U7KBOAHaEK?pid=ImgDet&rs=1'); */
+        background-size: cover;
+    }
+
+    #map {
+        border-width: thick;
+    }
+
+    .loader {
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #3498db;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+</style>
+<div id="map" style="border-width:thick;"></div>
+<script>
+navigator.geolocation.getCurrentPosition(position => {
+  const { latitude, longitude } = position.coords;
+  // Show a map centered at latitude / longitude.
+map.innerHTML = '<iframe width="700" height="300" src="https://maps.google.com/maps?q='+latitude+','+longitude+'&amp;z=15&amp;output=embed"></iframe>';
+});
+</script><br><br>
+<div id="buttonPage">
+        <button id="showLoadingButton" >Request Help</button>
+        <h1>Help is on the way</h1>
+    </div>
+
+    
+   
+</body>
+
+

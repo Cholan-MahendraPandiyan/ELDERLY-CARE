@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--========== BOX ICONS ==========-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+        <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />  
+        <script defer src="https://pyscript.net/alpha/pyscript.js"></script>  
+
+        <!--========== CSS ==========-->
+        <link rel="stylesheet" href="../assets/css/styles.css">
+        <link rel="stylesheet" href="../assets/css/theme.css">
+        
+        
+       
+    
+    <body>
+        <!--========== HEADER ==========-->
+        <header class="header">
+            
+            <div class="header__container">
+                
+
+                <a href="#" class="header__logo">ElderlyCare</a>
+                <!-- <a class="nav-link" href="#">Caregiver</a>
+                <a class="nav-link" href="#">Contact</a> -->
+                
+                
+    
+                <div class="header__toggle">
+                    <i class='bx bx-menu' id="header-toggle"></i>
+                </div>
+            </div>
+        </header>
+
+        <!--========== NAV ==========-->
+        <div class="nav" id="navbar">
+            <nav class="nav__container">
+                <div>
+                    <a href="#" class="nav__link nav__logo">
+                        
+                        <span class="nav__logo-name">ElderlyCare</span>
+                    </a>
+    
+                    <div class="nav__list">
+                        <div class="nav__items">
+                            <h3 class="nav__subtitle">Profile</h3>
+    
+                            <a href="navbar.html" class="nav__link active">
+                                <i class='bx bx-home nav__icon' ></i>
+                                <span class="nav__name">Home</span>
+                            </a>
+                            
+                            <div class="nav__dropdown">
+                                <a href="#" class="nav__link">
+                                    <i class='bx bx-user nav__icon' ></i>
+                                    <span class="nav__name">Profile</span>
+                                    <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                                </a>
+
+                                <div class="nav__dropdown-collapse">
+                                    <div class="nav__dropdown-content">
+                                        <a href="activity.html" class="nav__dropdown-item">Activity Log</a>
+                                        <a href="medical.html" class="nav__dropdown-item">Medical History</a>
+                                        <a href="../html/Appointment" class="nav__dropdown-item">Appoinment</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <a href="../html/Scheduler/demo" class="nav__link">
+                                <i class='bx bx-message-rounded nav__icon' ></i>
+                                <span class="nav__name">Schedule</span>
+                            </a> -->
+                        </div>
+    
+                        <!-- <div class="nav__items">
+                            <h3 class="nav__subtitle">Menu</h3>
+    
+                            <div class="nav__dropdown">
+                                <a href="#" class="nav__link">
+                                    <i class='bx bx-bell nav__icon' ></i>
+                                    <span class="nav__name">Notifications</span>
+                                    <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                                </a>
+
+                                <!-- <div class="nav__dropdown-collapse">
+                                    <div class="nav__dropdown-content">
+                                        <a href="#" class="nav__dropdown-item">Blocked</a>
+                                        <a href="#" class="nav__dropdown-item">Silenced</a>
+                                        <a href="#" class="nav__dropdown-item">Publish</a>
+                                        <a href="#" class="nav__dropdown-item">Program</a>
+                                    </div>
+                                </div> -->
+
+                            <!-- </div>
+
+                            <a href="#" class="nav__link">
+                                <i class='bx bx-compass nav__icon' ></i>
+                                <span class="nav__name">Explore</span>
+                            </a>
+                            <a href="#" class="nav__link">
+                                <i class='bx bx-bookmark nav__icon' ></i>
+                                <span class="nav__name">Saved</span>
+                            </a>
+                        </div>
+                    </div>
+                </div> --> 
+
+                <a href="login.html" class="nav__link nav__logout">
+                    <i class='bx bx-log-out nav__icon' ></i>
+                    <span class="nav__name">Log Out</span>
+                </a>
+            </nav>
+        </div>
+
+        <!--========== CONTENTS ==========-->
+        <main>
+            <section>
+               
+                <style>
+                body {
+                    margin: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100vh; /* Make the body fill the entire viewport height */
+                    /* background-image: url('https://th.bing.com/th/id/OIP.1xMjhdff7VzokzE9U7KBOAHaEK?pid=ImgDet&rs=1'); */
+                    background-size: cover;
+                }
+            
+                #map {
+                    border-width: thick;
+                }
+                #buttonPage {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: red;
+            color: white;
+        }
+                /* .loader {
+                    border: 4px solid #f3f3f3;
+                    border-top: 4px solid #3498db;
+                    border-radius: 50%;
+                    width: 30px;
+                    height: 30px;
+                    animation: spin 2s linear infinite;
+                }
+            
+                @keyframes spin {
+                    0% { transform: rotate(0deg); }
+                    100% { transform: rotate(360deg); }
+                } */
+            </style>
+            <div id="map" style="border-width:thick;"></div>
+            
+            <script>
+            navigator.geolocation.getCurrentPosition(position => {
+              const { latitude, longitude } = position.coords;
+              // Show a map centered at latitude / longitude.
+            map.innerHTML = '<iframe width="700" height="300" src="https://maps.google.com/maps?q='+latitude+','+longitude+'&amp;z=15&amp;output=embed"></iframe>';
+            });
+            </script><br><br>
+            <div id="buttonPage">
+                <button onclick="sendSOS()">SOS</button>
+                <h1 id="helpMessage"></h1>
+            </div>
+        
+            <script>
+                function sendSOS() {
+                    // document.getElementById('helpMessage').textContent = 'Help is on the way';
+                    navigator.geolocation.getCurrentPosition(position => {
+                const { latitude, longitude } = position.coords;
+
+                // Send coordinates to the PHP backend using fetch
+                fetch('store_coordinates.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: `latitude=${latitude}&longitude=${longitude}`,
+                })
+                .then(response => response.text())
+                .then(responseText => {
+                    // Display the response (you can customize this as needed)
+                    document.getElementById('helpMessage').textContent = responseText;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    // Handle errors as needed
+                });
+            });
+        }
+                
+            </script>
+               
+            </body>
+            </style>
+           
+            
+               
+            </section>
+        </main>
+
+        <!--========== MAIN JS ==========-->
+        <script src="../assets/js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--========== BOX ICONS ==========-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+        <!--========== CSS ==========-->
+        <link rel="stylesheet" href="../assets/css/styles.css">
+        <link rel="stylesheet" href="../assets/css/theme.css">
+        
+        
+       
+    
+    <body>
+        <!--========== HEADER ==========-->
+        <header class="header">
+            
+            <div class="header__container">
+                
+
+                <a href="#" class="header__logo">ElderlyCare</a>
+                <!-- <a class="nav-link" href="#">Caregiver</a>
+                <a class="nav-link" href="#">Contact</a> -->
+                
+                
+    
+                <div class="header__toggle">
+                    <i class='bx bx-menu' id="header-toggle"></i>
+                </div>
+            </div>
+        </header>
+
+        <!--========== NAV ==========-->
+        <div class="nav" id="navbar">
+            <nav class="nav__container">
+                <div>
+                    <a href="#" class="nav__link nav__logo">
+                        
+                        <span class="nav__logo-name">ElderlyCare</span>
+                    </a>
+    
+                    <div class="nav__list">
+                        <div class="nav__items">
+                            <h3 class="nav__subtitle">Profile</h3>
+    
+                            <a href="navbar.html" class="nav__link active">
+                                <i class='bx bx-home nav__icon' ></i>
+                                <span class="nav__name">Home</span>
+                            </a>
+                            
+                            <div class="nav__dropdown">
+                                <a href="#" class="nav__link">
+                                    <i class='bx bx-user nav__icon' ></i>
+                                    <span class="nav__name">Profile</span>
+                                    <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                                </a>
+
+                                <div class="nav__dropdown-collapse">
+                                    <div class="nav__dropdown-content">
+                                        <a href="activity.html" class="nav__dropdown-item">Activity Log</a>
+                                        <a href="medical.html" class="nav__dropdown-item">Medical History</a>
+                                        <a href="../html/Appointment" class="nav__dropdown-item">Appoinment</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <a href="../html/Scheduler/demo" class="nav__link">
+                                <i class='bx bx-message-rounded nav__icon' ></i>
+                                <span class="nav__name">Schedule</span>
+                            </a> -->
+                        </div>
+    
+                        <!-- <div class="nav__items">
+                            <h3 class="nav__subtitle">Menu</h3>
+    
+                            <div class="nav__dropdown">
+                                <a href="#" class="nav__link">
+                                    <i class='bx bx-bell nav__icon' ></i>
+                                    <span class="nav__name">Notifications</span>
+                                    <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                                </a>
+
+                                <div class="nav__dropdown-collapse">
+                                    <div class="nav__dropdown-content">
+                                        <a href="#" class="nav__dropdown-item">Blocked</a>
+                                        <a href="#" class="nav__dropdown-item">Silenced</a>
+                                        <a href="#" class="nav__dropdown-item">Publish</a>
+                                        <a href="#" class="nav__dropdown-item">Program</a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <a href="#" class="nav__link">
+                                <i class='bx bx-compass nav__icon' ></i>
+                                <span class="nav__name">Explore</span>
+                            </a>
+                            <a href="#" class="nav__link">
+                                <i class='bx bx-bookmark nav__icon' ></i>
+                                <span class="nav__name">Saved</span>
+                            </a>
+                        </div>
+                    </div>
+                </div> -->
+
+                <a href="login.html" class="nav__link nav__logout">
+                    <i class='bx bx-log-out nav__icon' ></i>
+                    <span class="nav__name">Log Out</span>
+                </a>
+            </nav>
+        </div> 
+        
+
+     
+        <main>
+            <section>
+                <style>
+                    body {
+                        font-family: Arial, sans-serif;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 100vh;
+                        margin: 0;
+                        background-color: #f5f5f5;
+                    }
+            
+                    .container {
+                        text-align: center;
+                        background-color: white;
+                        padding: 50px;
+                        border-radius: 10px;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                    }
+            
+                    .activity-form {
+                        width: 100%; /* Adjust the width as needed */
+                        margin: 0 auto; /* Center the form horizontally */
+                    }
+            
+                    label {
+                        display: block;
+                        margin-bottom: 8px;
+                        font-weight: bold;
+                        text-align: left;
+                    }
+            
+                    input[type="text"] {
+                        width: 100%;
+                        padding: 10px;
+                        margin-bottom: 10px;
+                        border: 1px solid #ccc;
+                        border-radius: 5px;
+                        font-size: 16px;
+                    }
+            
+                    button {
+                        background-color: #4caf50;
+                        color: white;
+                        border: none;
+                        padding: 12px 20px;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        font-size: 16px;
+                        transition: background-color 0.3s ease;
+                    }
+            
+                    button:hover {
+                        background-color: #45a049;
+                    }
+            
+                    #activityLog {
+                        text-align: left;
+                        margin-top: 20px;
+                    }
+                </style>
+            </head>
+
+
+
+    <div class="container">
+        <form action="login.php" method="post"></form>
+        <h1>Hourly Activity Tracker</h1>
+        <form action="activity.php" method="post">
+        <div class="activity-form">
+            <label for="activity">Activity:</label>
+            <input type="text" id="activity" name="activity" required>
+            <button onclick="logActivity()">Log Activity</button>
+            <button onclick="downloadLog()">Download Log</button>
+        </div>
+        <div id="activityLog"></div>
+        </form>
+    </div>
+
+    <script>
+        // Load log data from Local Storage if available
+        var logData = JSON.parse(localStorage.getItem('logData')) || [];
+
+        // Function to update the activity log
+        function updateActivityLog() {
+            document.getElementById('activityLog').innerText = logData.join('\n');
+        }
+
+        // Update activity log when the page loads
+        window.onload = updateActivityLog;
+
+        function logActivity() {
+            var activity = document.getElementById('activity').value;
+            var timestamp = new Date().toLocaleString();
+            var logEntry = timestamp + "," + activity; // CSV format: timestamp,activity
+            logData.push(logEntry); // Add the log entry to the array
+
+            // Update the activity log and save data to Local Storage
+            updateActivityLog();
+            localStorage.setItem('logData', JSON.stringify(logData));
+        }
+
+        function downloadLog() {
+            var csvContent = "data:text/csv;charset=utf-8," + logData.join("\n");
+            var encodedUri = encodeURI(csvContent);
+            var link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", "activity_log.csv");
+            document.body.appendChild(link);
+            link.click();
+        }
+
+    </script>
+</body> 
+
+
+
+            </section>
+        </main>
+
+        <!--========== MAIN JS ==========-->
+        <script src="../assets/js/main.js"></script>
+
+</html>

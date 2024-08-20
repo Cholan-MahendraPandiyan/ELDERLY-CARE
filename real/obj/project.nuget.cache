@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "3dcIOTO8C31hA4OP78/durHAWDziIm4uHpuI1PSiiqT+MzaBSMOuiFpqYsEBgD3P0F/48ML9k7pMJNQROSgeqA==",
+  "success": true,
+  "projectFilePath": "C:\\xampp\\htdocs\\31-10\\real\\real.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\CHERAN\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.24\\microsoft.windowsdesktop.app.ref.6.0.24.nupkg.sha512",
+    "C:\\Users\\CHERAN\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.24\\microsoft.netcore.app.ref.6.0.24.nupkg.sha512",
+    "C:\\Users\\CHERAN\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.24\\microsoft.aspnetcore.app.ref.6.0.24.nupkg.sha512",
+    "C:\\Users\\CHERAN\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.24\\microsoft.netcore.app.host.win-x64.6.0.24.nupkg.sha512"
+  ],
+  "logs": []
+}

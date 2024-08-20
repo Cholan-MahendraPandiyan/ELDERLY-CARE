@@ -1,0 +1,9 @@
+CREATE DATABASE IF NOT EXIST location;
+US location;
+
+CREATE TABLE IF NOT EXISTS coordinates (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    latitude DOUBLE,
+    longitude DOUBLE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
